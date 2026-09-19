@@ -22,6 +22,10 @@ Scrypto blueprint with a real lifecycle, ROLA wallet authentication, transaction
 manifests built server-side, gateway state reads, and an event processor
 reconciling on-ledger truth with a database — that is what this is.
 
+It is also a working reference for [hookah.ing](https://app.hookah.ing), which
+is how everything here finds out that anything happened on-ledger. See
+[watching the ledger](#how-it-watches-the-ledger-hookahing).
+
 ## What a prediction market does here
 
 Someone creates a market: a question, a deadline, and two or more outcomes. Each
@@ -129,7 +133,7 @@ server.
 | `scrypto/` | The Scrypto blueprint, its tests and transaction manifests |
 | `apps/web/` | SvelteKit front end — market list, market view, creation, profile |
 | `apps/admin/` | React + Vite admin panel — categories, oracle games, resolution |
-| `apps/event-processor/` | Express + BullMQ worker following ledger events |
+| `apps/event-processor/` | Express + BullMQ worker following ledger events; `src/hookah/` is the hookah.ing integration |
 | `packages/database/` | Prisma schema, client and the demo seed |
 | `packages/radix/` | Gateway client, manifest builders, account helpers |
 | `packages/types/` | Shared TypeScript types |
@@ -139,6 +143,55 @@ server.
 
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) goes deeper — the auth flow, the
 API surface, the event pipeline and the resolution rules.
+
+## How it watches the ledger: hookah.ing
+
+This is the part worth stealing, and the part radix.bet was built around.
+
+A prediction market only works if the app knows what happened on-ledger — a
+market created, a vote cast, a winner marked, a prize claimed. Polling the
+gateway for every component you care about does not scale past a few markets,
+and misses things when it is down.
+
+radix.bet delegates that to **[hookah.ing](https://app.hookah.ing)**, a service
+that watches Radix for you and posts a webhook when a specific component emits a
+specific event. `apps/event-processor/src/hookah/` is the whole integration:
+
+1. **Authenticate.** Ed25519 keypair via `hookah-sdk` — the processor signs a
+   challenge with its private key under the persona `radixbet-event-processor`.
+   No password, same shape as the wallet login below.
+2. **Register a webhook.** One URL, with a shared secret sent as
+   `x-webhook-signature`.
+3. **Create triggers.** A trigger is an `(emitter address, event name)` pair.
+   One sits on the *package* address for `BetCreatedEvent`, so every new market
+   is caught without knowing about it in advance. Each market then gets its own
+   component-level triggers for votes, resolution and claims.
+4. **Receive and reconcile.** `POST /api/webhook/events` validates the
+   signature, decodes the SBOR event payload, and routes it into BullMQ queues
+   that write to Postgres.
+
+The `HookahTrigger` table mirrors what is registered remotely, so startup can
+reconcile the two: stale package triggers from a previous `RADIX_PACKAGE_ADDRESS`
+are removed, orphaned component triggers for markets that no longer exist are
+cleaned up, and nothing is registered twice. That reconciliation
+(`hookah/setup.ts`) is the piece that makes a webhook-driven indexer survive
+redeploys.
+
+**You do not need it to run the playground.** The seeded markets are already in
+the database and the web app reads them directly. You need it only to follow a
+*live* ledger — which means deploying your own blueprint and running the event
+processor with:
+
+```bash
+HOOKAH_BASE_URL=https://app.hookah.ing
+HOOKAH_PUBLIC_KEY=...        # your persona keypair
+HOOKAH_PRIVATE_KEY=...
+HOOKAH_WEBHOOK_URL=...       # publicly reachable; use a tunnel locally
+HOOKAH_WEBHOOK_SECRET=...
+```
+
+The webhook URL has to be reachable from the internet, so for local work you
+want ngrok or similar in front of the event processor.
 
 ## How the wallet login works
 
