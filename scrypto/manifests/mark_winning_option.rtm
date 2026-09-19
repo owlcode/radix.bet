@@ -1,0 +1,10 @@
+CALL_METHOD
+    Address("component_tdx_2_1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxyulkzl")
+    "lock_fee"
+    Decimal("5000")
+;
+CALL_METHOD
+    Address("component_tdx_2_1cqcyx3cv33nlxrnqjrl2thgkm3pecvsvm4kccannxv5pq0ydn93kzm")
+    "mark_winning_option"
+    "Kielecki"
+;

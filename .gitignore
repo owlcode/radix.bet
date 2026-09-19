@@ -1,0 +1,26 @@
+node_modules/
+.pnpm-store/
+.turbo/
+
+# Build output
+build/
+dist/
+.svelte-kit/
+packages/database/generated/
+
+# Scrypto / Rust build output (gigabytes — never commit)
+scrypto/target/
+
+# Local environment. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+*.log
+
+# Generated key material. Stokenet keys are worthless, but a private key in a
+# public repository is a habit worth not forming.
+*accounts.json
+.deployment-info.json

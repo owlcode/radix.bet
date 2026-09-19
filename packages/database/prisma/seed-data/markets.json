@@ -1,0 +1,799 @@
+{
+  "demoIdentityAddress": "identity_tdx_2_12tltwh00wvvur5yph5tqnjwlsallytzmxs3lgzc9g9c5gaggu0x0ph",
+  "markets": [
+    {
+      "componentAddress": "component_tdx_2_1czjvvzz6xqrm7lwrurn2l85ht7pvplxddc2kejngde4sx4g0yucdqj",
+      "name": "New England Revolution vs Houston Dynamo FC",
+      "slug": "new-england-revolution-vs-houston-dynamo-fc-b240f9",
+      "description": "New England Revolution vs Houston Dynamo FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-08T20:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1698,
+      "createdAt": "2026-08-01T20:47:12.043",
+      "voteCount": 2501,
+      "options": [
+        {
+          "id": 1698,
+          "name": "Houston Dynamo FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+          "resourceAddress": "resource_tdx_2_1t5zzfxy85zdh80f6cvwevcshxcyce0hn98h2alrtgvttaukwpl5gp5",
+          "totalVotes": "40802"
+        },
+        {
+          "id": 1699,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1th4wf8a6avdcnh5x7n5cvldmguaxw46quy9uzc9z5wf2g9td6mh0nw",
+          "totalVotes": "44220"
+        },
+        {
+          "id": 1697,
+          "name": "New England Revolution",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+          "resourceAddress": "resource_tdx_2_1t4t6wtmvrsr4jlexl7ypcxwdghh4xyavpelxrrz0pd5g4jf28v7hza",
+          "totalVotes": "43781"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cpv3j0j2h7r47frrt2x6h5c9z8s30ry8vm93du5gw8ad3pmhhe0yxw",
+      "name": "Portland Timbers vs Seattle Sounders FC",
+      "slug": "portland-timbers-vs-seattle-sounders-fc-79782c",
+      "description": "Portland Timbers vs Seattle Sounders FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T02:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1694,
+      "createdAt": "2026-07-26T04:47:18.125",
+      "voteCount": 174,
+      "options": [
+        {
+          "id": 1695,
+          "name": "Seattle Sounders FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png",
+          "resourceAddress": "resource_tdx_2_1t4gl5892gc75ez83rvzzs6w5arhps9uqmekpf2jsl3lft2cum8dlxy",
+          "totalVotes": "2711"
+        },
+        {
+          "id": 1696,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1tkt70n6u2mtjuavmtfrua9jzqvy2vf47z7m0smx02aepvvmkz3eg6v",
+          "totalVotes": "3389"
+        },
+        {
+          "id": 1694,
+          "name": "Portland Timbers",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png",
+          "resourceAddress": "resource_tdx_2_1tkq0g02kq4dwqye75ck0yf6fzwtcj6vdezg7d5fyeutkuqfewmkfqc",
+          "totalVotes": "2741"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cq62k4esn4qc8rtgsdp295m9j7jchvj9z6p8q7ry66ze46pmyr0ms4",
+      "name": "LA Galaxy vs FC Dallas",
+      "slug": "la-galaxy-vs-fc-dallas-d677de",
+      "description": "LA Galaxy vs FC Dallas",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T02:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1693,
+      "createdAt": "2026-07-26T04:47:18.124",
+      "voteCount": 165,
+      "options": [
+        {
+          "id": 1692,
+          "name": "FC Dallas",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png",
+          "resourceAddress": "resource_tdx_2_1t48x0lhnjucjyaqh8dn2h57pxnssu3a4zwutu9gcjhwany5vrj5uda",
+          "totalVotes": "3328"
+        },
+        {
+          "id": 1691,
+          "name": "LA Galaxy",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png",
+          "resourceAddress": "resource_tdx_2_1tkh5q8p0zay2rudnha75m5jppz49hp5ffuq2jpg9pd3n2v0jh5n2nw",
+          "totalVotes": "3093"
+        },
+        {
+          "id": 1693,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t59qahkdrqxgm239s84kkm9lc7fqryrlu2w6mkrddk4thx9vln66tw",
+          "totalVotes": "2770"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cqtgrv7pn2r3q3e37d6rge09kzfja2a6t5m8qrdqu6luhmrnykt8dp",
+      "name": "Colorado Rapids vs Austin FC",
+      "slug": "colorado-rapids-vs-austin-fc-c5a624",
+      "description": "Colorado Rapids vs Austin FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T01:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1688,
+      "createdAt": "2026-07-26T04:47:18.114",
+      "voteCount": 171,
+      "options": [
+        {
+          "id": 1688,
+          "name": "Colorado Rapids",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png",
+          "resourceAddress": "resource_tdx_2_1thpl0kw942n2aee9504fysa400alyy6jytprcfhkxv37z3yeva4qh4",
+          "totalVotes": "2822"
+        },
+        {
+          "id": 1690,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1th7ytujfzgxxa3f7qlau5nns5d00gn5z4gckl7xq93c5sfjh2033rg",
+          "totalVotes": "2997"
+        },
+        {
+          "id": 1689,
+          "name": "Austin FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png",
+          "resourceAddress": "resource_tdx_2_1t4aywwaa8zwupjy0pl3dsl6jg8pwl9q0yaq9s5tsx6y0tgrht70mxq",
+          "totalVotes": "3272"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1crhgmrjh5tshq8hcd2ctcv70yq3s9tqajdhd5tcev2234ar86l8egp",
+      "name": "Minnesota United FC vs San Diego FC",
+      "slug": "minnesota-united-fc-vs-san-diego-fc-96fdaa",
+      "description": "Minnesota United FC vs San Diego FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1687,
+      "createdAt": "2026-07-26T03:47:23.01",
+      "voteCount": 170,
+      "options": [
+        {
+          "id": 1687,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1thnq3qlnm7h99amgslqhensw3ngq5q4zsu7evjwdetc7nyfeuzvq0k",
+          "totalVotes": "3253"
+        },
+        {
+          "id": 1685,
+          "name": "Minnesota United FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png",
+          "resourceAddress": "resource_tdx_2_1t53tut756k2a7wrmnqzv9t7trc03ucs2du90xgw9qr4sv47wgaym4d",
+          "totalVotes": "3173"
+        },
+        {
+          "id": 1686,
+          "name": "San Diego FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
+          "resourceAddress": "resource_tdx_2_1t5jm6vt84xvl468kp8hzwfd4x36nc384mymtr9fvyc9vjwh2s2qpn6",
+          "totalVotes": "3408"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cr6ncccr9c57j5h5h3aa24k0r6p0asdhxkx82gvrczenxdltvanz0s",
+      "name": "Sporting Kansas City vs Houston Dynamo FC",
+      "slug": "sporting-kansas-city-vs-houston-dynamo-fc-7088dc",
+      "description": "Sporting Kansas City vs Houston Dynamo FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1683,
+      "createdAt": "2026-07-26T03:47:23.002",
+      "voteCount": 184,
+      "options": [
+        {
+          "id": 1684,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t5ggkfgxk5gn73rk2dlh62h8kalkne3adz0dcvw0tfl7vmf0m6ynns",
+          "totalVotes": "3471"
+        },
+        {
+          "id": 1682,
+          "name": "Sporting Kansas City",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png",
+          "resourceAddress": "resource_tdx_2_1t4extuvn6lfqdw4vccyur3scvz0n0ydz43j8xhsrpd64dv6jkx2ung",
+          "totalVotes": "3006"
+        },
+        {
+          "id": 1683,
+          "name": "Houston Dynamo FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+          "resourceAddress": "resource_tdx_2_1th6dvz5v5qt8jlra5uekyw06v6k2zwa3jm8rqstnkc350hslswk6l6",
+          "totalVotes": "3156"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cr22w2vqxxgd20zyljyzxnt07dcszrrpjs0xp79fw4dmw0plaj6wnx",
+      "name": "St. Louis CITY SC vs Real Salt Lake",
+      "slug": "st-louis-city-sc-vs-real-salt-lake-7f3734",
+      "description": "St. Louis CITY SC vs Real Salt Lake",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-02T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1681,
+      "createdAt": "2026-07-26T03:47:22.971",
+      "voteCount": 178,
+      "options": [
+        {
+          "id": 1680,
+          "name": "Real Salt Lake",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
+          "resourceAddress": "resource_tdx_2_1thxkzk5jdrhzyhtudsffwpagjec74e0kv3u9km0zfdmk560r3gv5q9",
+          "totalVotes": "3111"
+        },
+        {
+          "id": 1681,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t52zljz3z044qejtteadz9pvcqlcct7em5my7gykwzycncarttmt20",
+          "totalVotes": "2394"
+        },
+        {
+          "id": 1679,
+          "name": "St. Louis CITY SC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png",
+          "resourceAddress": "resource_tdx_2_1t5emd6skj6fd6t6a7hxejdxcz0em4lt4c27fndqeewhwnhelgk6n8r",
+          "totalVotes": "3667"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cz7upqh74qecu7setvkdjgkkjzy2szdt00wrtl0qqa5x6rd9vdemz4",
+      "name": "Philadelphia Union vs Atlanta United FC",
+      "slug": "philadelphia-union-vs-atlanta-united-fc-f1d164",
+      "description": "Philadelphia Union vs Atlanta United FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-01T23:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1667,
+      "createdAt": "2026-07-26T03:17:17.39",
+      "voteCount": 161,
+      "options": [
+        {
+          "id": 1669,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1th4d0l04ta7ce2jx8x62e7avep4z57hdl0gzgl9yslvp7458kgctt6",
+          "totalVotes": "2397"
+        },
+        {
+          "id": 1668,
+          "name": "Atlanta United FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+          "resourceAddress": "resource_tdx_2_1t5qw6wkzs4s84hgcn7vnha8dtje8k2xd479nxqrp8d9devagss8au5",
+          "totalVotes": "2957"
+        },
+        {
+          "id": 1667,
+          "name": "Philadelphia Union",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+          "resourceAddress": "resource_tdx_2_1tk04rdnk85ykm6kz6qqyt8dtzgz7kkz7942xlcftmn2ekwd00cmapr",
+          "totalVotes": "3008"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cr4e5sckernxcqn46tr4qt99gn2dm0ef53pkcds8hqxlv5mfstr2f3",
+      "name": "Inter Miami CF vs Columbus Crew",
+      "slug": "inter-miami-cf-vs-columbus-crew-a91b74",
+      "description": "Inter Miami CF vs Columbus Crew",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-01T23:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1666,
+      "createdAt": "2026-07-26T02:47:12.931",
+      "voteCount": 189,
+      "options": [
+        {
+          "id": 1666,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1th9fr7rxx2rcqdtp7er3a88fghn3ccahz28mdcqwgh2amplcnk3uw7",
+          "totalVotes": "3031"
+        },
+        {
+          "id": 1665,
+          "name": "Columbus Crew",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+          "resourceAddress": "resource_tdx_2_1t5wtn2v66cpnr04q3kffwgaehk75cltuz7fjtqj582gx4yy38re2gl",
+          "totalVotes": "2708"
+        },
+        {
+          "id": 1664,
+          "name": "Inter Miami CF",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+          "resourceAddress": "resource_tdx_2_1tk9nn5r8qz88r8j4jhh523lxfkpun9wyc58hhuxej2q3v7xxpuj96j",
+          "totalVotes": "3505"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1crh3y8l00cxal82ty2n0x9gvmgh7x2js7qmcr2awwpr0wm5kdekwxx",
+      "name": "D.C. United vs Nashville SC",
+      "slug": "dc-united-vs-nashville-sc-fe02da",
+      "description": "D.C. United vs Nashville SC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-01T23:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1663,
+      "createdAt": "2026-07-25T23:47:16.671",
+      "voteCount": 165,
+      "options": [
+        {
+          "id": 1661,
+          "name": "D.C. United",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
+          "resourceAddress": "resource_tdx_2_1t4us2ku7ylas9fc0sh8h9xx3uaq6lzxvmeg40nesratsdx8dtglwdt",
+          "totalVotes": "2321"
+        },
+        {
+          "id": 1662,
+          "name": "Nashville SC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
+          "resourceAddress": "resource_tdx_2_1t40hn4nde5m5u8r860ft450m6a4r2js544v50c6uj537smw6ye9q2l",
+          "totalVotes": "2915"
+        },
+        {
+          "id": 1663,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t52q9jd8vrzedtuvh3uymg0alvzxhg52j7dsp2205khc5f0gmcmjcd",
+          "totalVotes": "3798"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cpw5a72u7q6y37x7nhfkcw7unkltxg7vzdyzrux5me9p7gll5n7yth",
+      "name": "CF Montr\u00e9al vs New England Revolution",
+      "slug": "cf-montral-vs-new-england-revolution-44aa34",
+      "description": "CF Montr\u00e9al vs New England Revolution",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-08-01T23:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1657,
+      "createdAt": "2026-07-25T23:47:16.65",
+      "voteCount": 170,
+      "options": [
+        {
+          "id": 1657,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t4ky2yhuz6ucv3lzwfd8htuxwkxkv24f96lxleqh05k4c89h5ypulj",
+          "totalVotes": "3090"
+        },
+        {
+          "id": 1656,
+          "name": "New England Revolution",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+          "resourceAddress": "resource_tdx_2_1tkt2klhk0fxe00788xmgla79fy2er3vkzk3s5wqsuqqvf8up8d5x0z",
+          "totalVotes": "2598"
+        },
+        {
+          "id": 1655,
+          "name": "CF Montr\u00e9al",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+          "resourceAddress": "resource_tdx_2_1th73357pcj5jjvcwnnfp8jpt37ymr0xvng4mqkwhr34urk6zj39hll",
+          "totalVotes": "2992"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cr5v794f4skhxgwkjlyjqs47mznl8q7hmnm73qzt9mpvjta4j9jesl",
+      "name": "New York City FC vs Toronto FC",
+      "slug": "new-york-city-fc-vs-toronto-fc-a5852f",
+      "description": "New York City FC vs Toronto FC",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-07-31T23:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1654,
+      "createdAt": "2026-07-24T23:47:14.458",
+      "voteCount": 164,
+      "options": [
+        {
+          "id": 1653,
+          "name": "Toronto FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+          "resourceAddress": "resource_tdx_2_1tknf9zlwr93vneqs4g338q0c2dmsnv9k0ngfvhq8g87v96r0hw7f0v",
+          "totalVotes": "2922"
+        },
+        {
+          "id": 1652,
+          "name": "New York City FC",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+          "resourceAddress": "resource_tdx_2_1thhuw577aeg9pve70ul2trx9m9ad05yvq464se2z359dkuzelv8jlv",
+          "totalVotes": "2736"
+        },
+        {
+          "id": 1654,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t5494pewyukg763gwvwccp2yf0ngwf2n38h9jzcczjtz0r37dtmcly",
+          "totalVotes": "2921"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1czqma4ecysf5e75rzv4fgqk4lym9q65rkv9nkrrdk40n424jhuv0z8",
+      "name": "MLS All-Stars vs Liga MX All-Stars",
+      "slug": "mls-all-stars-vs-liga-mx-all-stars-2deca0",
+      "description": "MLS All-Stars vs Liga MX All-Stars",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-07-29T23:55:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1649,
+      "createdAt": "2026-07-23T10:11:44.874",
+      "voteCount": 173,
+      "options": [
+        {
+          "id": 1649,
+          "name": "MLS All-Stars",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9817.png",
+          "resourceAddress": "resource_tdx_2_1t5fqpsrdusrpctckg37c6e853yy055g8w9d4gkkytmqmw6cma7j9ja",
+          "totalVotes": "2756"
+        },
+        {
+          "id": 1650,
+          "name": "Liga MX All-Stars",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20279.png",
+          "resourceAddress": "resource_tdx_2_1t4pkljhp3wxkgflr4k3t5ha5h2vr3hesf79u3y34ag5n85xs376vmf",
+          "totalVotes": "3011"
+        },
+        {
+          "id": 1651,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1t5eqa5dds9htd2etp2h54y4ldsyze09p26s3axypydmmlyjgqches4",
+          "totalVotes": "3111"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cqqx3urjwgdqtsxsmddzhmsfr0ggjup8snt4rryqgyuq8ztpk2tcjl",
+      "name": "San Antonio Spurs vs New York Knicks",
+      "slug": "san-antonio-spurs-vs-new-york-knicks-a4a921",
+      "description": null,
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-06-14T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1540,
+      "createdAt": "2026-06-12T00:31:47.07",
+      "voteCount": 638,
+      "options": [
+        {
+          "id": 1539,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1t4mkt2kxakwyn0nmsfldt5dy037cmwwvj59dqv3dsdcsaqzfdsd0h0",
+          "totalVotes": "17142"
+        },
+        {
+          "id": 1540,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1t557p6ws4s6gpadsaqwy42dp5cpdx0x3var8a563vvptaex225vfl9",
+          "totalVotes": "16417"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1czfuckpmv69qs0kx0r62rt7cmr0495lxdshn309x4fj4x8fr7sjalj",
+      "name": "New York Knicks vs San Antonio Spurs",
+      "slug": "new-york-knicks-vs-san-antonio-spurs-8267ab",
+      "description": null,
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-06-11T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1537,
+      "createdAt": "2026-06-09T00:43:01.534",
+      "voteCount": 643,
+      "options": [
+        {
+          "id": 1537,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1t4f0ggd599r8l40c2lpudp2rk8egkhnummtcz0w3hg0lqjv5k80m6v",
+          "totalVotes": "17384"
+        },
+        {
+          "id": 1538,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1t537cg2ga9pn7y3ktapwecdqw7z3d2sl3gld8y8crwgpdxa5hw9lcm",
+          "totalVotes": "15821"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cpwu6n9hva0h0wwfes00r3mzfnzuze3d8a6ytsp5ad6nuy8t93yxaq",
+      "name": "New York Knicks vs San Antonio Spurs",
+      "slug": "new-york-knicks-vs-san-antonio-spurs-bb3be2",
+      "description": "New York Knicks vs San Antonio Spurs",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-06-09T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1536,
+      "createdAt": "2026-06-07T00:31:11.595",
+      "voteCount": 697,
+      "options": [
+        {
+          "id": 1536,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1tk4u2rlywyljsdsvm66vfezlxpa6t8g4lde83ddq6n7whlq3aykjln",
+          "totalVotes": "17402"
+        },
+        {
+          "id": 1535,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1th9f2dwzcj3wnatje75lcdvvweat5pjduwdkdejhl3kzzutf5k7r27",
+          "totalVotes": "18425"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cra9dnsz8f4d5tj27v4zlyyayypwchsszd29a6rfguegs8l74y30vn",
+      "name": "San Antonio Spurs vs New York Knicks",
+      "slug": "san-antonio-spurs-vs-new-york-knicks-e36539",
+      "description": "San Antonio Spurs vs New York Knicks",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-06-06T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1534,
+      "createdAt": "2026-06-04T00:31:11.87",
+      "voteCount": 699,
+      "options": [
+        {
+          "id": 1533,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1t5evf0kmjfhjp4af7n576nxfkf8ccpczyphc0kz8zezm0q56ftjn0w",
+          "totalVotes": "19002"
+        },
+        {
+          "id": 1534,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1tkdj674x7zqtakr53w6rem233x2zeav3fmw8ta9s2q7jr2mea4ed0w",
+          "totalVotes": "17203"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cqg5vdq9n5ayt38gdrfv55amyrwm7puesqe92ja6xhq8hnnlqqs6y3",
+      "name": "San Antonio Spurs vs New York Knicks",
+      "slug": "san-antonio-spurs-vs-new-york-knicks-c6f13d",
+      "description": "San Antonio Spurs vs New York Knicks",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-06-04T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1532,
+      "createdAt": "2026-06-02T00:31:20.817",
+      "voteCount": 698,
+      "options": [
+        {
+          "id": 1532,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1t5tdqpgs3pft9d6s7pjxskwewddr8r22ukxa38f2lms5x5lly5lxw4",
+          "totalVotes": "17897"
+        },
+        {
+          "id": 1531,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1tk4kqsk2skgzfnp89srt28dt8uu7gh2g6wux8gn5cvnw0fa9j7d7f8",
+          "totalVotes": "18155"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1crtsz6twnwcmdnr2zy92ztk4czvtt5rnyz4f7jtrppxwxvpjlcmszy",
+      "name": "Oklahoma City Thunder vs San Antonio Spurs",
+      "slug": "oklahoma-city-thunder-vs-san-antonio-spurs-f02fc9",
+      "description": "Oklahoma City Thunder vs San Antonio Spurs",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-30T23:55:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1530,
+      "createdAt": "2026-05-29T00:05:38.885",
+      "voteCount": 423,
+      "options": [
+        {
+          "id": 1530,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1t4jcu23zfjjnztcpaq2pnmackkdghhz49crttwe26hdnevyz6ee4pa",
+          "totalVotes": "10025"
+        },
+        {
+          "id": 1529,
+          "name": "Oklahoma City Thunder",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+          "resourceAddress": "resource_tdx_2_1thedmagn3jnqj9mn5sj02hlfk8twn2mgaz7g6h0zs9kctr3s7x22zf",
+          "totalVotes": "11099"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cq29dax35sp9qw4vm0ftc7mact22283xmzxxlxvkvgnyw4uvkea9nv",
+      "name": "San Antonio Spurs vs Oklahoma City Thunder",
+      "slug": "san-antonio-spurs-vs-oklahoma-city-thunder-a23eeb",
+      "description": null,
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-29T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1527,
+      "createdAt": "2026-05-27T00:35:36.903",
+      "voteCount": 330,
+      "options": [
+        {
+          "id": 1528,
+          "name": "Oklahoma City Thunder",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+          "resourceAddress": "resource_tdx_2_1t5kpmzff5qgsamydw3936ra09w02hynpxmn0nvtfd89gjsjshxt4dn",
+          "totalVotes": "9992"
+        },
+        {
+          "id": 1527,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1tkdxyj2hjsravcf27g8w8jrmvusj93ejl2epk2fpvjfc2p6ks0k3zp",
+          "totalVotes": "7642"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1czfecsug6vjgwwpj29cjngnw7n9w2k59dqjvetpfxd96nezn23u3zs",
+      "name": "New York Knicks vs Cleveland Cavaliers",
+      "slug": "new-york-knicks-vs-cleveland-cavaliers-685edd",
+      "description": "New York Knicks vs Cleveland Cavaliers",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-27T23:55:00.000Z",
+      "verifierType": "single",
+      "status": "ACTIVE",
+      "winningOptionId": null,
+      "createdAt": "2026-05-26T00:05:34.971",
+      "voteCount": 243,
+      "options": [
+        {
+          "id": 1525,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1t4vnj8yjpdx86nyse8sp5rmt8ae377vl63n2ylr56atd4xlfhpy3ys",
+          "totalVotes": "6330"
+        },
+        {
+          "id": 1526,
+          "name": "Cleveland Cavaliers",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+          "resourceAddress": "resource_tdx_2_1tkpqhvq88r5y5kex8ry4s9mha60vppjw2urkucqtwhl0vzph7ly3dm",
+          "totalVotes": "6119"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1czann9n8y5jnqagpdnxd5a7n38delh40tls7thq74juqfdv7syh4f3",
+      "name": "Oklahoma City Thunder vs San Antonio Spurs",
+      "slug": "oklahoma-city-thunder-vs-san-antonio-spurs-60f91c",
+      "description": "Oklahoma City Thunder vs San Antonio Spurs",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-27T00:25:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1523,
+      "createdAt": "2026-05-25T00:35:42.63",
+      "voteCount": 269,
+      "options": [
+        {
+          "id": 1523,
+          "name": "Oklahoma City Thunder",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+          "resourceAddress": "resource_tdx_2_1t4naqr84cazjzvhh0sxn690llcwjw5yprk2m8k9s3sn8a50p554kgy",
+          "totalVotes": "7228"
+        },
+        {
+          "id": 1524,
+          "name": "San Antonio Spurs",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+          "resourceAddress": "resource_tdx_2_1t43wgu7apyawyh3senpkrsp3as3vueauvww5nl6jd0zmmv0y2e2vtc",
+          "totalVotes": "7219"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cqpeacm3p0lmgg773hnehk2flsfjtv8azkd4mj3mjvu65v73cr6z3g",
+      "name": "Paris Saint-Germain vs Arsenal",
+      "slug": "paris-saint-germain-vs-arsenal-da7656",
+      "description": "Paris Saint-Germain vs Arsenal",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-30T15:55:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1520,
+      "createdAt": "2026-05-24T19:05:40.488",
+      "voteCount": 870,
+      "options": [
+        {
+          "id": 1521,
+          "name": "Arsenal",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "resourceAddress": "resource_tdx_2_1t4s9uvuwu20r94unvthk3yu860f35lmqcpg2m09zy6p6f9rd3ayvdx",
+          "totalVotes": "15003"
+        },
+        {
+          "id": 1520,
+          "name": "Paris Saint-Germain",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "resourceAddress": "resource_tdx_2_1t58zg0wllg7ehaqxy5ngsyjyylqmfwszqppzxl3w73p80vnlxudcdg",
+          "totalVotes": "14699"
+        },
+        {
+          "id": 1522,
+          "name": "Draw",
+          "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/default-team-logo-500.png&w=100&h=100",
+          "resourceAddress": "resource_tdx_2_1thwkslgv2kr05mq4jsnkuzcr9xrh5w7q7wh8z0kavuq77lau9lnf2f",
+          "totalVotes": "13995"
+        }
+      ]
+    },
+    {
+      "componentAddress": "component_tdx_2_1cqm05dqct58u8qamjefu46xps2s2l732uxkhpzhfq6kv4r5as6eeh9",
+      "name": "Cleveland Cavaliers vs New York Knicks",
+      "slug": "cleveland-cavaliers-vs-new-york-knicks-4a1ca8",
+      "description": "Cleveland Cavaliers vs New York Knicks",
+      "currency": "resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc",
+      "deadline": "2026-05-25T23:55:00.000Z",
+      "verifierType": "single",
+      "status": "RESOLVED",
+      "winningOptionId": 1501,
+      "createdAt": "2026-05-24T00:05:38.075",
+      "voteCount": 184,
+      "options": [
+        {
+          "id": 1501,
+          "name": "New York Knicks",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+          "resourceAddress": "resource_tdx_2_1tkxu5l92nyse9wg597prxywk8zzzqu77hky7nwwuzdz4re6fsdl900",
+          "totalVotes": "4270"
+        },
+        {
+          "id": 1500,
+          "name": "Cleveland Cavaliers",
+          "imageUrl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+          "resourceAddress": "resource_tdx_2_1t40evrrmelfuanj8dec6nyd3wzfyg87tfk2qm7gvssllqvt299l3xx",
+          "totalVotes": "5194"
+        }
+      ]
+    }
+  ]
+}

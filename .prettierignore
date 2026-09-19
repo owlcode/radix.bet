@@ -1,0 +1,7 @@
+pnpm-lock.yaml
+.svelte-kit
+**/build
+**/dist
+**/node_modules
+**/generated
+scrypto/target

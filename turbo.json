@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local", ".env"],
+  "globalPassThroughEnv": [
+    "RADIXBET_DATABASE_URL",
+    "RADIXBET_VALKEY_URL",
+    "RADIX_NETWORK",
+    "RADIX_GATEWAY_URL",
+    "RADIX_PACKAGE_ADDRESS",
+    "JWT_SECRET"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**", ".svelte-kit/**"]
+    },
+    "dev": { "cache": false, "persistent": true },
+    "test": {},
+    "lint": { "dependsOn": ["^build"] },
+    "check": { "dependsOn": ["^build"] },
+    "typecheck": {},
+    "db:generate": { "cache": false },
+    "db:push": { "cache": false },
+    "db:seed": { "cache": false }
+  }
+}

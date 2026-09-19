@@ -1,0 +1,40 @@
+# Local dependencies for the playground. Postgres and Valkey only — there is
+# no deployment here, and nothing in this file is intended to run in
+# production.
+#
+# Ports are offset from the defaults (5433 / 6380) so this does not collide
+# with a Postgres or Redis you already have running.
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: radixbet
+      POSTGRES_PASSWORD: radixbet
+      POSTGRES_DB: radixbet
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U radixbet -d radixbet']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  valkey:
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    ports:
+      - '6380:6379'
+    volumes:
+      - valkey_data:/data
+    healthcheck:
+      test: ['CMD', 'valkey-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
+  valkey_data:

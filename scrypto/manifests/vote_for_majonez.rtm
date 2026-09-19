@@ -1,0 +1,47 @@
+CALL_METHOD
+    Address("component_tdx_2_1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxyulkzl")
+    "lock_fee"
+    Decimal("5000")
+;
+CALL_METHOD
+    Address("account_tdx_2_1c8m6h4yv2x9ca0wx5ddtl0nctqmjt2t740wfjgj9w8sdz82zyrnjm9")
+    "withdraw"
+    Address("resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc")
+    Decimal("100")
+;
+TAKE_ALL_FROM_WORKTOP
+    Address("resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc")
+    Bucket("bucket")
+;
+CALL_METHOD
+    Address("component_tdx_2_1cqcyx3cv33nlxrnqjrl2thgkm3pecvsvm4kccannxv5pq0ydn93kzm")
+    "vote"
+    "Winiary"
+    Bucket("bucket")
+;
+CALL_METHOD
+    Address("account_tdx_2_1c8m6h4yv2x9ca0wx5ddtl0nctqmjt2t740wfjgj9w8sdz82zyrnjm9")
+    "deposit_batch"
+    Expression("ENTIRE_WORKTOP")
+;
+CALL_METHOD
+    Address("account_tdx_2_1c8m6h4yv2x9ca0wx5ddtl0nctqmjt2t740wfjgj9w8sdz82zyrnjm9")
+    "withdraw"
+    Address("resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc")
+    Decimal("70")
+;
+TAKE_ALL_FROM_WORKTOP
+    Address("resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc")
+    Bucket("bucket2")
+;
+CALL_METHOD
+    Address("component_tdx_2_1cqcyx3cv33nlxrnqjrl2thgkm3pecvsvm4kccannxv5pq0ydn93kzm")
+    "vote"
+    "Kielecki"
+    Bucket("bucket2")
+;
+CALL_METHOD
+    Address("account_tdx_2_1c8m6h4yv2x9ca0wx5ddtl0nctqmjt2t740wfjgj9w8sdz82zyrnjm9")
+    "deposit_batch"
+    Expression("ENTIRE_WORKTOP")
+;

@@ -1,0 +1,326 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  identityAddress     String   @id
+  createdAt           DateTime @default(now())
+  bets                Bet[]
+  userAccounts        UserAccount[]
+  recurringTemplates  RecurringBetTemplate[]
+  comments            Comment[]
+  voteIntents         VoteIntent[]
+}
+
+model Account {
+  address             String  @id
+  label               String?
+  appearanceId        Int?
+  userAccounts        UserAccount[]
+}
+
+model UserAccount {
+  identityAddress  String
+  accountAddress   String
+  linkedAt         DateTime @default(now())
+
+  user    User    @relation(fields: [identityAddress], references: [identityAddress])
+  account Account @relation(fields: [accountAddress], references: [address])
+
+  @@id([identityAddress, accountAddress])
+  @@index([accountAddress])
+}
+
+model Bet {
+  componentAddress         String      @id
+  name                     String
+  slug                     String?     @unique
+  description              String?
+  currency                 String?     // Resource address of the betting token (null = XRD)
+  deadline                 String
+  categoryId               String?
+  verifierType             String      @default("single")
+  secondVerifier           String?
+  userIdentityAddress      String
+  winningOptionId          Int?
+  status                   BetStatus   @default(ACTIVE)
+  createdAt                DateTime    @default(now())
+  updatedAt                DateTime    @updatedAt
+
+  // Optional link to recurring template that created this bet
+  recurringTemplateId      String?
+  recurringTemplate        RecurringBetTemplate? @relation("RecurringBetCreations", fields: [recurringTemplateId], references: [id])
+
+  user     User        @relation(fields: [userIdentityAddress], references: [identityAddress])
+  category Category?   @relation(fields: [categoryId], references: [id])
+  options  BetOption[] @relation(name: "options")
+  events   EventLog[]
+  comments Comment[]
+  verifierVotes  VerifierVote[]
+  votes    Vote[]
+
+  @@index([categoryId])
+  @@index([userIdentityAddress])
+  @@index([createdAt])
+  @@index([status])
+  @@index([recurringTemplateId])
+}
+
+enum BetStatus {
+  ACTIVE
+  VOTING_CLOSED
+  RESOLVED
+  SETTLED
+  CANCELLED
+}
+
+model BetOption {
+  id               Int    @id @default(autoincrement())
+  name             String
+  imageUrl         String
+  componentAddress String
+  resourceAddress  String @unique
+  totalVotes       String @default("0")
+
+  bet   Bet    @relation(name: "options", fields: [componentAddress], references: [componentAddress])
+  votes Vote[]
+
+  @@index([componentAddress, resourceAddress])
+}
+
+model Challenge {
+  challenge String   @id
+  createdAt DateTime @default(now())
+}
+
+// New models for event processing
+
+model EventLog {
+  id              String   @id @default(cuid())
+  eventType       String
+  transactionId   String?
+  stateVersion    BigInt?
+  componentAddress String?
+  payload         Json
+  processedAt     DateTime @default(now())
+  status          EventStatus @default(PROCESSED)
+  errorMessage    String?
+
+  bet Bet? @relation(fields: [componentAddress], references: [componentAddress])
+
+  @@index([eventType])
+  @@index([transactionId])
+  @@index([stateVersion])
+  @@index([componentAddress])
+  @@index([processedAt])
+}
+
+enum EventStatus {
+  PENDING
+  PROCESSED
+  FAILED
+}
+
+model Config {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+// Recurring Bets - Pre-approved templates for automated bet creation
+model RecurringBetTemplate {
+  id                   String   @id @default(cuid())
+  name                 String
+  description          String?
+  options              Json     // Array of {name: string, imageUrl: string}
+  categoryId           String?
+  currency             String   // Resource address
+
+  // Schedule configuration
+  scheduleType         ScheduleType
+  scheduleDay          Int?     // Day of week (0-6) or day of month (1-31)
+  scheduleTime         String   // HH:MM in UTC
+  timezone             String   @default("UTC")
+  deadlineOffsetHours  Int      @default(24) // How many hours after creation until deadline
+
+  // User and authorization
+  userIdentityAddress  String
+  subintentSignature   String?  // Pre-signed subintent for transaction submission
+
+  // State
+  isActive             Boolean  @default(true)
+  nextRunAt            DateTime
+  lastRunAt            DateTime?
+  runCount             Int      @default(0)
+  maxRuns              Int?     // null = unlimited
+
+  // Timestamps
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  // Relations
+  user                 User     @relation(fields: [userIdentityAddress], references: [identityAddress])
+  category             Category? @relation(fields: [categoryId], references: [id])
+  betsCreated          Bet[]    @relation("RecurringBetCreations")
+
+  @@index([userIdentityAddress])
+  @@index([isActive])
+  @@index([nextRunAt])
+  @@index([categoryId])
+}
+
+enum ScheduleType {
+  DAILY
+  WEEKLY
+  MONTHLY
+  CUSTOM  // For one-time scheduled bets
+}
+
+model Comment {
+  id               String   @id @default(cuid())
+  content          String
+  componentAddress String
+  userIdentityAddress String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  bet  Bet  @relation(fields: [componentAddress], references: [componentAddress])
+  user User @relation(fields: [userIdentityAddress], references: [identityAddress])
+
+  @@index([componentAddress])
+  @@index([userIdentityAddress])
+  @@index([createdAt])
+}
+
+model VerifierVote {
+  id               String   @id @default(cuid())
+  componentAddress String
+  optionResource   String
+  voterNftId       String
+  createdAt        DateTime @default(now())
+  bet              Bet      @relation(fields: [componentAddress], references: [componentAddress])
+
+  @@unique([componentAddress, voterNftId])
+  @@index([componentAddress])
+}
+
+model HookahTrigger {
+  id             String   @id // Hookah's trigger ID
+  webhookId      String
+  emitterAddress String
+  eventName      String
+  createdAt      DateTime @default(now())
+
+  @@unique([emitterAddress, eventName])
+  @@index([emitterAddress])
+}
+
+enum OracleGameStatus {
+  DISCOVERED
+  BET_CREATED
+  BET_FAILED
+  RESOLVED
+  RESOLUTION_FAILED
+}
+
+model OracleGame {
+  id                    String            @id @default(cuid())
+  espnEventId           String
+  sport                 String
+  league                String
+  homeTeamName          String
+  awayTeamName          String
+  homeTeamLogo          String?
+  awayTeamLogo          String?
+  startTime             DateTime
+  status                OracleGameStatus  @default(DISCOVERED)
+  betComponentAddress   String?
+  ownerBadgeAddress     String?
+  transactionId         String?
+  resolveTransactionId  String?
+  winnerTeam            String?
+  oracleId              String
+  createdAt             DateTime          @default(now())
+  updatedAt             DateTime          @updatedAt
+
+  @@unique([espnEventId, oracleId])
+  @@index([status, oracleId])
+  @@index([startTime])
+}
+
+model BetExtension {
+  transactionId String   @id
+  description   String?
+  categoryId    String?
+  slug          String?
+  imageUrl              String?
+  userIdentityAddress   String?
+  createdAt             DateTime @default(now())
+
+  category      Category? @relation(fields: [categoryId], references: [id])
+
+  @@index([categoryId])
+}
+
+model Category {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  nameKey  String  @unique
+  isSystem Boolean @default(false)
+
+  bets                Bet[]
+  recurringTemplates  RecurringBetTemplate[]
+  betExtensions       BetExtension[]
+}
+
+model Vote {
+  id               String   @id @default(cuid())
+  componentAddress String
+  optionAddress    String
+  amount           Decimal
+  transactionId    String   @unique
+  stateVersion     BigInt
+  createdAt        DateTime @default(now())
+
+  voteIntentId     String?      @unique
+  voteIntent       VoteIntent?  @relation(fields: [voteIntentId], references: [id])
+
+  bet    Bet       @relation(fields: [componentAddress], references: [componentAddress])
+  option BetOption @relation(fields: [optionAddress], references: [resourceAddress])
+
+  @@index([componentAddress])
+  @@index([optionAddress])
+}
+
+model VoteIntent {
+  id                    String   @id @default(cuid())
+  identityAddress       String
+  accountAddress        String
+  componentAddress      String
+  optionResourceAddress String
+  amount                String
+  transactionId         String?  @unique
+  matched               Boolean  @default(false)
+  createdAt             DateTime @default(now())
+
+  user User  @relation(fields: [identityAddress], references: [identityAddress])
+  vote Vote?
+
+  @@index([identityAddress])
+  @@index([componentAddress])
+  @@index([transactionId])
+}
+
+model TeamImage {
+  id        String   @id @default(cuid())
+  teamName  String   @unique
+  sport     String
+  league    String
+  imageUrl  String
+  updatedAt DateTime @updatedAt
+}
