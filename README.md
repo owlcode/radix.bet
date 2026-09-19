@@ -190,7 +190,19 @@ resolution can be stopped independently without a redeploy.
 
 Running it needs the event processor, a deployed blueprint and a funded account,
 since every create and resolve is a real signed transaction. The admin panel's
-Oracle page lists discovered games and their state.
+Oracle page lists discovered games and their state, and there are two scripts
+for when it goes sideways:
+
+```bash
+pnpm oracle:games      # what the oracle has discovered, and where each game got to
+pnpm oracle:backfill   # rebuild Bet rows from OracleGames whose BetCreatedEvent never arrived
+```
+
+The second one is the recovery path for the failure mode the webhook pipeline
+below has: if hookah.ing is down when a market is created on-ledger, the event
+never reaches us and the database silently lacks a market that exists. The
+oracle still holds the component address, so the row can be reconstructed from
+it.
 
 ## How it watches the ledger: hookah.ing
 

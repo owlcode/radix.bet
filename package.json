@@ -21,7 +21,9 @@
     "scrypto:test": "cd scrypto && cargo test",
     "scrypto:publish": "dotenv -- tsx scripts/deploy-scrypto.ts",
     "faucet": "dotenv -- tsx scripts/claim-faucet.ts",
-    "accounts:generate": "dotenv -- tsx scripts/generate-test-accounts.ts"
+    "accounts:generate": "dotenv -- tsx scripts/generate-test-accounts.ts",
+    "oracle:games": "dotenv -- tsx scripts/check-oracle-games.ts",
+    "oracle:backfill": "dotenv -- tsx scripts/backfill-bets-from-oracle.ts"
   },
   "devDependencies": {
     "dotenv": "^17.2.3",
