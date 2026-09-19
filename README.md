@@ -23,8 +23,9 @@ manifests built server-side, gateway state reads, and an event processor
 reconciling on-ledger truth with a database — that is what this is.
 
 It is also a working reference for [hookah.ing](https://app.hookah.ing), which
-is how everything here finds out that anything happened on-ledger. See
-[watching the ledger](#how-it-watches-the-ledger-hookahing).
+is how everything here finds out that anything happened on-ledger, and it ships
+with an [ESPN-driven oracle](#the-oracle-markets-that-create-and-settle-themselves)
+that creates and settles sports markets end to end with no human in the loop.
 
 ## What a prediction market does here
 
@@ -133,7 +134,7 @@ server.
 | `scrypto/` | The Scrypto blueprint, its tests and transaction manifests |
 | `apps/web/` | SvelteKit front end — market list, market view, creation, profile |
 | `apps/admin/` | React + Vite admin panel — categories, oracle games, resolution |
-| `apps/event-processor/` | Express + BullMQ worker following ledger events; `src/hookah/` is the hookah.ing integration |
+| `apps/event-processor/` | Express + BullMQ worker following ledger events; `src/hookah/` is the hookah.ing integration, `src/oracle/` the ESPN oracle |
 | `packages/database/` | Prisma schema, client and the demo seed |
 | `packages/radix/` | Gateway client, manifest builders, account helpers |
 | `packages/types/` | Shared TypeScript types |
@@ -143,6 +144,53 @@ server.
 
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) goes deeper — the auth flow, the
 API surface, the event pipeline and the resolution rules.
+
+## The oracle: markets that create and settle themselves
+
+Nobody wrote those 24 seeded markets by hand. They were created, and most of
+them resolved, by an oracle that reads [ESPN](https://www.espn.com/)'s public
+scoreboard and drives the whole lifecycle on-ledger without a human in it.
+
+`apps/event-processor/src/oracle/` is that engine. A game moves through four
+states:
+
+```
+DISCOVERED ──create──▶ BET_CREATED ──settle──▶ RESOLVED
+     │                      │
+     └──▶ BET_FAILED        └──▶ RESOLUTION_FAILED
+```
+
+Both failure states are terminal and deliberate: a game that could not be turned
+into a market, and a market that could not be settled from the data available.
+
+1. **Fetch** (`fetch-games.ts`, `espn.ts`) — polls ESPN on an interval for
+   upcoming fixtures, and records each as an `OracleGame` in `DISCOVERED`.
+2. **Create** (`create-bet.ts`) — builds and submits the `create_bet`
+   transaction: one option per team, plus a draw option for leagues that allow
+   one, deadline set to kick-off, team badges as option images.
+3. **Resolve** (`resolve-bet.ts`) — once ESPN reports the game final, works out
+   the winner from the box score and submits `mark_winning_option`, burning the
+   owner badge.
+
+Configured out of the box (`oracle/configs.ts`): **NBA**, and football for the
+Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League and MLS.
+Leagues carry a `hasDraw` flag, which is what decides whether a market gets two
+outcomes or three.
+
+The interesting part is what it does when it *cannot* decide. If ESPN reports no
+winner and the league does not allow draws, or the component and badge addresses
+needed for the mark-winner transaction are missing, the game goes to
+`RESOLUTION_FAILED` with a logged reason rather than guessing. A market that
+settles wrongly is worse than one that does not settle — so nothing is ever
+resolved on an assumption.
+
+Both halves have kill switches (`oracle:create:enabled`, `oracle:resolve:enabled`)
+held in runtime config and toggleable from the admin panel, so creation and
+resolution can be stopped independently without a redeploy.
+
+Running it needs the event processor, a deployed blueprint and a funded account,
+since every create and resolve is a real signed transaction. The admin panel's
+Oracle page lists discovered games and their state.
 
 ## How it watches the ledger: hookah.ing
 
